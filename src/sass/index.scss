@@ -1,0 +1,68 @@
+
+
+body, html, #indexBox, #login{
+  width: 100%;
+  height: 100%;
+  background: url("../img/xupt2.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+#title{
+  float: left;
+  width: 60%;
+  height: 60px;
+  margin-left: 20%;
+  margin-top: 60px;
+  background: url("../img/header2.png") no-repeat;
+  background-size: 100% 100%;
+}
+#inputBox{
+  float: left;
+  width: 100%;
+  height: 150px;
+  margin-top: 40px;
+}
+#inputBox>h5{
+  float: left;
+  width: 20%;
+  height: 50px;
+  color: #007605;
+  margin-left: 7%;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+#inputBox>input{
+  float: left;
+  width: 60%;
+  height: 24px;
+  margin: 13px 0;
+  text-indent: 10px;
+  border: 1px solid #E3E0E0;
+  border-radius: 3px;
+}
+#inputBox>img{
+  float: right;
+  width: 60px;
+  height: 24px;
+  margin-top: -38px;
+  margin-right: 13%;
+  background-color: #888;
+}
+button{
+  float: left;
+  width: 70px;
+  height: 35px;
+  border: none;
+  color: white;
+  margin-left: 50%;
+  margin-top: 451px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  background-color: #5CB85C;
+}
+button>p{
+  width: 54px;
+  height: 40px;
+  line-height: 55px;
+  text-align: center;
+}
