@@ -30,6 +30,7 @@ body, html, #indexBox, #login{
   line-height: 50px;
   text-align: center;
   font-weight: 600;
+  font-family: "宋体";
 }
 #inputBox>input{
   float: left;
@@ -48,21 +49,22 @@ body, html, #indexBox, #login{
   margin-right: 13%;
   background-color: #888;
 }
-button{
+#button{
   float: left;
   width: 70px;
   height: 35px;
   border: none;
   color: white;
   margin-left: 50%;
-  margin-top: 451px;
+  margin-top: 45px;
   border-radius: 5px;
   transform: translateX(-50%);
   background-color: #5CB85C;
 }
-button>p{
-  width: 54px;
-  height: 40px;
+#button>p{
+  width: 70px;
+  height: 35px;
   line-height: 55px;
+  line-height: 35px;
   text-align: center;
 }

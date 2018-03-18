@@ -1,0 +1,152 @@
+@mixin usual{
+  float: left;
+  width: 100%;
+}
+
+body, html, #mainBox{
+  width: 100%;
+  height: 100%;
+  background: url("../img/xupt2.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+#header{
+  @include usual;
+  position: fixed;
+  height: 55px;
+  background: url("../img/banner.png");
+  
+  #return{
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 49px;
+    margin-top: 3px;
+    margin-left: 5px;
+    background: url("../img/return.png");
+    background-size: 100% 100%;
+    z-index: 999;
+  }
+
+  p{
+    @include usual;
+    position: absolute;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    color: white;
+  }
+}
+
+#content{
+  @include usual;
+  margin-top: 55px;
+  margin-bottom: 70px;
+}
+
+
+#footer{
+  @include usual;
+  position: fixed;
+  bottom: 0px;
+  height: 60px;
+  background: url("../img/bottom.png");
+  background-size: 100% 100%;
+  overflow: hidden;
+
+  p{
+    float: left;
+    width: 50px;
+    height: 60px;
+    font-size: 13px;
+    line-height: 60px;
+    text-align: center;
+  }
+  select{
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  div{
+    float: left;
+    width: 60px;
+    height: 32px;
+    color: white;
+    margin-top: 14px;
+    line-height: 32px;
+    text-align: center;
+    margin-left: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    background-color: #449D44;
+  }
+}
+.right{
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}
+.right-logo{
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: url("../img/xuptlogo.jpg");
+  background-size: 100% 100%;
+}
+.right-angle{
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin-top: 12px;
+  margin-right: 5px;
+  background: url("../img/triangle2.png");
+  background-size: 100% 100%;
+}
+.right-box{
+  float: right;
+  margin-right: -5px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  max-width: 250px;
+  text-align: right;
+}
+
+.left{
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.left-logo{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background: url("../img/xiyou3g.jpg");
+  background-size: 100% 100%;
+}
+.left-angle{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: 12px;
+  margin-left: 5px;
+  background: url("../img/triangle1.png");
+  background-size: 100% 100%;
+}
+.left-box{
+  float: left;
+  margin-left: -5px;
+  background-color: #19CC28;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  max-width: 250px;
+  text-align: left;
+  line-height: 17px;
+}

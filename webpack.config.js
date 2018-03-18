@@ -2,8 +2,8 @@ var path = require("path");
 
 module.exports = {
   entry: {
-    index: "./build/jsx/index.js",
-    // scroe: "./build/jsx/score.js",
+    index: "./src/jsx/index.js",
+    scroe: "./src/jsx/score.js",
   },
   output: {
     path: path.join(__dirname, "build/jsx_build/"),

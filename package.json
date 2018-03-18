@@ -1,14 +1,29 @@
 {
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-webpack": "^1.5.0",
+    "jsx-loader": "^0.13.2",
+    "run-sequence": "^1.2.2"
+  },
   "name": "xiyouscore",
+  "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QiaoDing18/XiyouMobile-Score-Web.git"
+  },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "webpack": "^2.5.1"
-  }
+  "bugs": {
+    "url": "https://github.com/QiaoDing18/XiyouMobile-Score-Web/issues"
+  },
+  "homepage": "https://github.com/QiaoDing18/XiyouMobile-Score-Web#readme"
 }

@@ -60,10 +60,14 @@
       ReactDOM.findDOMNode(this.refs.vercode).value = null;
       this.base().baseAjax('http://scoreapi.xiyoumobile.com/users/login', that.data, 'GET', function(data){
         if(data.error == false){
-          $.cookie('username', that.data.username);
-          $.cookie('password', that.data.password);
-          $.cookie('session', data.result.session);
-          $.cookie('verCode', that.data.verCode);
+          // $.cookie('username', that.data.username);
+          // $.cookie('password', that.data.password);
+          // $.cookie('session', data.result.session);
+          // $.cookie('verCode', that.data.verCode);
+          localStorage.username = that.data.username;
+          localStorage.password = that.data.password;
+          localStorage.session = data.result.session;
+          localStorage.verCode = that.data.verCode;
           window.location.href = 'score.html';
         }else{
           alert("请检输入");

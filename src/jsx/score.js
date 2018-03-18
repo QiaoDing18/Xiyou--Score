@@ -46,7 +46,7 @@
             <div className="right-logo"></div>
             <div className="right-angle"></div>
             <div className="right-box">
-              <p>西安邮电大学祝您鸡年大吉</p>
+              <p>西安邮电大学祝您狗年大吉</p>
             </div>
           </div>
           {this.setData()}
@@ -80,10 +80,10 @@
     },
 
     getUserCookie: function(callback){
-      this.data.username = $.cookie('username');
-      this.data.password = $.cookie('password');
-      this.data.session = $.cookie('session');
-      this.data.verCode = $.cookie('verCode');
+      this.data.username = localStorage.username;
+      this.data.password = localStorage.password;
+      this.data.session = localStorage.session;
+      this.data.verCode = localStorage.verCode;
       callback();
     },
 
@@ -91,9 +91,12 @@
       var that = this;
       var localData = {
         username: that.data.username,
+        password: that.data.password,
         session: that.data.session,
+        year: that.data.year,
+        semester: that.data.semester,
       };
-      this.base().baseAjax('http://scoreapi.xiyoumobile.com/score/all', localData, 'GET', function(data){
+      this.base().baseAjax('http://scoreapi.xiyoumobile.com/score/year', localData, 'GET', function(data){
         that.data.score = data;
       });
     }, 
@@ -101,11 +104,13 @@
     checkScore: function(){
       this.data.year = ReactDOM.findDOMNode(this.refs.year).value;
       this.data.semester = ReactDOM.findDOMNode(this.refs.semester).value;
-      var local = this.data;
+      var local = this.data;;
       for(var i=0; i<local.score.result.score.length; i++){
         if(local.score.result.score[i].year === local.year){
-          local.trueScore = local.score.result.score[i].Terms[local.semester-1].Scores;
+          local.trueScore = local.score.result.score[i].Terms[local.semester].Scores;
           break;
+        }else{
+          local.trueScore = "没有查到呢";
         }
       }
       this.setState({transData: local.trueScore});

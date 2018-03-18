@@ -1,2 +1,1 @@
-### 西邮成绩Web
-#### react.js sass gulp webpack
+###西邮成绩

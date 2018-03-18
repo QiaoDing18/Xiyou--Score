@@ -9,7 +9,7 @@ var webpackConfig = require('./webpack.config.js');
 
 gulp.task('webpack', function(){
   var myConfig = Object.create(webpackConfig);
-  return  gulp.src('build/jsx/*.js')
+  return  gulp.src('src/jsx/*.js')
   .pipe(webpack(myConfig))
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
@@ -25,8 +25,17 @@ gulp.task('styles', function(){
     .pipe(gulp.dest('src/css_min'));
 });
 
+//脚本
+// gulp.task('scripts', function(){
+//   return  gulp.src('build/jsx/*.js')
+//   .pipe(webpack(webpackConfig))
+//   .pipe(uglify())
+//   .pipe(rename({ suffix: '.min' }))
+//   .pipe(gulp.dest('build/jsx_build'));
+// });
+
 gulp.task('watch', function(){
-  gulp.watch('build/jsx/*', ['webpack']);
+  gulp.watch('src/jsx/*', ['webpack']);
   gulp.watch('src/sass/*', ['styles']);
 });
 
